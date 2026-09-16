@@ -28,7 +28,7 @@
         <div id="navbarNav" class="collapse navbar-collapse">
           <ul class="navbar-nav ms-auto">
             <li class=""><a href="/" aria-label='Home'>Services</a> |</li>
-            <li class=""><a href="/#menu" aria-label='Menu'>Portfolio</a> |</li>
+            <li class=""><a href="/#portfolio" aria-label='Portfolio'>Portfolio</a> |</li>
             {% if request.user.is_authenticated %}
             <li>
               <form  class="logout" action="{% url 'users:logout' %}" method="post">
@@ -37,8 +37,8 @@
               </form>
             </li>
             {% else %}
-            <li class=""><a href="" aria-label='User Registration'>Sign Up</a> |</li>
-            <li class=""><a href="" aria-label='User Login'>Login</a> |</li>
+            <li><a href="{% url 'users:register' %}" aria-label='User Registration'>Sign Up</a> |</li>
+            <li><a href="{% url 'users:login' %}" aria-label='User Login'>Login</a> |</li>
             {% endif %}
           </ul>
         </div>
