@@ -1,0 +1,52 @@
+{% extends 'layout.html'%}
+
+{% load static %}
+
+{% block title%}
+    Home
+{% endblock %}
+
+{% block content %}
+<section class="section">
+<div class="d-flex align-items-center justify-content-center">   
+    <div>
+        <h1>Welcome to Emporio</h1>
+        <p>If you are looking for top notch websites, you've come to the right place!</p>
+    </div>
+</div>
+</section>
+<section class="section">
+<div>
+    <h2>Services</h2>
+    <p>When it comes to how your website looks and works, it is a make-or-break proposition.
+       Your website visitors must feel comfortable navigating and interacting with your website, it must appeal
+       to your ideal customers and your content must be easily updatable. That is why we are offering our Services
+       so that your website ticks off all the boxes for a first rate site!
+    </p>
+</div>
+</section>
+<section class="section">
+<div>
+    <h2>
+        Portfolio
+    </h2>
+    <p>Here you can see some of the previous works we've done!</p>
+</div>
+<div id="portfolio-imgs">
+    <div class="d-flex image-container overlay">
+       <a href="https://sortead-7559c99c8714.herokuapp.com/"> <img src="{% static 'images/portfolio-sortead-thumbnail.png' %}"
+        alt="Thumbnail for Sortead site"> </a>
+    </div>
+    <div class="d-flex image-container overlay">
+       <a href="https://blumbloe.github.io/rock-paper-site/">  <img src="{% static 'images/portfolio-rock-paper-thumbnail.png' %}"
+         alt="Thumbnail for Rock paper site"> </a>
+    </div>
+    <div class="d-flex image-container overlay">
+       <a href="https://blumbloe.github.io/fortniting-101/">  <img src="{% static 'images/portfolio-fortniting-thumbnail.png' %}"
+         alt="Thumbnail for Fortniting-101 site"> </a>
+    </div>
+</div>
+</ul>
+</section>
+
+{% endblock %}

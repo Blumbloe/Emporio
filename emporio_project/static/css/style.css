@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+     --primary-font: "Inter", sans-serif;
+     --secondary-font: "Montserrat", cursive;
+     --Blue: #009FFD;
+     --Navy: #2A2A72;
+     --White: #EAF6FF;
+     --Orange: #FFA400;
+     --Black: #232528;
+} 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    font-size: 2rem;
+    background-color: var(--White);
+    color: var(--Blue);
+    flex-flow: column;
+}
+
+.section {
+padding-top: 40px;
+padding-bottom: 40px;
+}
+
+nav {
+    padding: 1rem;
+    background-color: var(--Blue);
+    font-family: var(--secondary-font);
+    color: var(--White);
+    align-items: center;
+    clear: both;
+    line-height: 2;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+nav  a, nav i {
+  color: var(--White);
+}
+
+nav a:hover, .logout-button:hover {
+    opacity: .85;
+    color: var(--White);
+}
+
+a:hover {
+    opacity: .85;
+    color: var(--Black);
+}
+
+a {
+    text-decoration: none;
+    color: var(--Black);
+}
+
+p {
+    font-size: 2.4vw;
+    font-family: var(--primary-font);
+}
+
+
+main {
+    flex-grow: 1;
+    display: grid;
+    place-content: center;
+}
+
+main > h2 {
+    margin-top: 20px;
+}
+
+h1, h2, p {
+    text-align: center;
+}
+
+h1, h2 {
+    font-family:  var(--secondary-font);
+    font-size: 5vw;
+}
+
+/* Portfolio section */
+.image-container {
+    width: fit-content;
+    border: 5px, ridge ,var(--Navy);
+    flex-direction: row;
+    float:left;
+}
+
+#portfolio-imgs {
+    display: flex;
+    justify-content:space-around;
+}
+
+img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+ul {
+    list-style-type: none;
+    flex-direction: row;
+}
+
+
+.overlay:hover {
+    filter: brightness(80%);
+}
+
+/* Buttons */
+
+.logout-button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.custom-button-outline {
+  border: 2px solid var(--Navy);
+  background-color: var(--Blue);
+  color: var(--White); 
+}
+.custom-button-outline:hover{
+    color: var(--White); 
+    background-color: var(--Navy); 
+}
+
+.btn > a {
+    color: var(--White);
+}
+
+/* Contact form section */
+#contact-form {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Footer / socials */
+#contact {
+    background-color: var(--Navy); 
+    color: var(--White); 
+}
+
+#contact h2{
+font-family: var(--secondary-font);
+}
+#contact .social-links i{
+    color: var(--White); 
+    font-size: 2rem;
+   margin-right: 15px;
+   margin-left: 15px;
+}
+
+#contact .social-links i:hover{
+    color: var(--amethyst); 
+    -webkit-transition: color 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+}
+#contact .social-links i span {
+    font-size: 1rem;
+    margin-right: 15px;
+    font-family: var(--primary-font);
+}
+
+ul > li, li > form > button {
+    font-size: 2.2vw;
+}
