@@ -29,9 +29,10 @@
           <ul class="navbar-nav ms-auto">
             <li class=""><a href="/" aria-label='Home'>Services</a> |</li>
             <li class=""><a href="/#portfolio" aria-label='Portfolio'>Portfolio</a> |</li>
+            <li class=""><a href="/review" aria-label='make a review'>Reviews |</a> </li>
             {% if request.user.is_authenticated %}
             <li>
-              <form  class="logout" action="{% url 'users:logout' %}" method="post">
+              <form  class="logout-button" action="{% url 'users:logout' %}" method="post">
                   {% csrf_token %}
                   <button class="logout-button" aria-label="User Logout" title="User Logout">Logout</button>
               </form>

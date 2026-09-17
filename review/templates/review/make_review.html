@@ -1,0 +1,33 @@
+{% extends 'layout.html'%}
+
+{% load static %}
+
+{% block title%}
+    Review
+{% endblock %}
+
+{% block content %}
+<h2>Make a review</h2>
+ <p>To make a review, please fill out the form below.
+  (registered users only).
+ </p>
+
+ {% if messages %}
+  <ul style="list-style-type: none;">
+    {% for message in messages %}
+      <li style="text-align: center;">{{ message }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+
+<form class="d-flex" action="{% url 'new_review' %}" method='post'>
+  {% csrf_token %}
+  {{ form.as_div }}
+  <button  type="submit" class="btn custom-button-outline d-block mx-auto mb-2">Make a comment!</button>
+</form>
+<p> If you would like to update or delete your booking please click the button below. </p>
+
+ <form  action="/review/view_reviews" method="get">
+      <button class="btn custom-button-outline d-block mx-auto mb-2"> Update </button>
+ </form>
+{% endblock %}

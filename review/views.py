@@ -5,3 +5,40 @@ from django.contrib import messages
 from .models import Review
 # Create your views here.
 
+
+def review_view(request):
+    context = {}
+    form = CreateReview(request.POST or None, request.FILES or None)
+    if form.is_valid():
+        form.save()
+    context['form'] = form
+    return render(request, "review/make_review.html", context)
+
+
+@login_required(login_url="/users/login/")
+def new_review(request):
+    if request.method == 'POST':
+        form = CreateReview(request.POST, request.FILES)
+        if form.is_valid():
+            newreview = form.save(commit=False)
+            newreview.user = request.user
+            newreview.save()
+            messages.success(request, "Comment successfully created")
+            return redirect('/')
+    else:
+        form = CreateReview()
+    return render(request, '/', {'form': form})
+
+@login_required(login_url="/users/login/")
+def update_review(request, review_id):
+    review = Review.objects.get(id=review_id)
+    if request.method == 'POST':
+        form = CreateReview(request.POST, request.FILES, instance=review)
+        if form.is_valid():
+            review.save()
+            messages.success(request, "Review successfully updated")
+            return redirect(reverse('view_review'))
+    else:
+        form = CreateReview(instance=review)
+    return render(request, 'review/update_review.html',
+                  {'form': form, 'review': review})
