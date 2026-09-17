@@ -88,12 +88,31 @@ h1, h2 {
     font-size: 5vw;
 }
 
+.card-deck {
+    display: flex;
+    
+}
+.card{
+    max-width: 70vh;
+}
+
+.card-title {
+    font-size: 2.0vw;
+}
+
+.card-button {
+   align-items: center;
+}
+
+
+
 /* Portfolio section */
 .image-container {
     width: fit-content;
     border: 5px, ridge ,var(--Navy);
     flex-direction: row;
     float:left;
+    max-width: 30vw;
 }
 
 #portfolio-imgs {
@@ -105,6 +124,7 @@ img {
     width: 250px;
     height: 250px;
     object-fit: cover;
+    
 }
 
 ul {
@@ -218,11 +238,23 @@ input + button {
     p {
      font-size: 23px;
   }
-  h1, h2 {
+    h1, h2 {
     font-size: 47px;
   }
 
+}
 
+@media only screen and (max-width: 992px) {
+    img{
+        width: 100%;
+    }
+    #portfolio-imgs{
+        flex-direction: column;
+        align-items: center;
+    }
+    .image-container{
+        margin-bottom: 20px;
+    }
 }
 @media screen and (min-width: 1200px) {
   p {
