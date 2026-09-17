@@ -10,6 +10,6 @@
 <form class="review-forms" method="POST" action="{% url 'update_review' review.id %}">
     {% csrf_token %}
     {{ form.as_div }}
-    <button  type="submit" class="btn custom-button-outline d-block mx-auto Review-buttons">Update Review</button>
+    <button  type="submit" class="btn custom-button-outline d-block mx-auto mb-2">Update Review</button>
 </form>
 {% endblock %}

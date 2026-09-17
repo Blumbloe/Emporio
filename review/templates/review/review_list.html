@@ -1,0 +1,54 @@
+{% extends 'layout.html'%}
+
+{% load static %}
+
+{% block title%}
+    Review List
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  <h2 class="text-center text-md-left mb-4">
+    Welcome, {{ user.first_name|default:user.username }} — Your Reviews
+  </h2>
+
+<div class="text-center mb-3">
+    <form  action="/review" method="get">
+        <button class="btn custom-button-outline d-block mx-auto"> Make a review </button>
+    </form>
+</div>
+ 
+
+  {% if reviews %}
+    <div class="table-responsive">
+      <table class="table table-striped table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th>Title</th>
+            <th>Body</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for review in reviews %}
+            <tr>
+              <td class="list-char">{{ review.title }}</td>
+              <td class="list-char">{{ review.body }}</td>
+              <td>
+                <a href="{% url 'update_review' review_id=review.id %}" class="btn btn-warning btn-sm">Edit</a>
+                <a href="{% url 'delete_review' review_id=review.id %}" class="btn btn-danger btn-sm">Delete</a>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    <div class="text-center py-5">
+      <h3 class="mb-3">You do not have any reviews yet</h3>
+      <p class="mb-4">Would you like to make a review?</p>
+      <button class="btn custom-button-outline d-block mx-auto">  <a href="/review">Create review</a> </button>
+    </div>
+  {% endif %}
+</div>
+{% endblock %}
