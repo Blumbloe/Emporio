@@ -20,7 +20,7 @@
   </ul>
 {% endif %}
 
-<form class="d-flex" action="{% url 'new_review' %}" method='post'>
+<form class="d-flex form-with-validation" action="{% url 'new_review' %}" method='post'>
   {% csrf_token %}
   {{ form.as_div }}
   <button  type="submit" class="btn custom-button-outline d-block mx-auto mb-2">Make a comment!</button>
