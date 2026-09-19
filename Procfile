@@ -1,0 +1,1 @@
+web: gunicorn emporio_project.wsgi

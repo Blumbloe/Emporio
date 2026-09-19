@@ -27,7 +27,7 @@ def new_review(request):
             return redirect('/review')
     else:
         form = CreateReview()
-    return render(request, '', {'form': form})
+    return render(request, 'review/make_review.html', {'form': form})
 
 @login_required(login_url="/users/login/")
 def update_review(request, review_id):
