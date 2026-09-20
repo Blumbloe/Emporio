@@ -1,9 +1,3 @@
-/*
-function changebody() {
-  var element = document.body;
-  element.classList.toggle("darkmode");
-} */
-
 const toggleBtn = document.getElementById("theme-toggler");
 const body = document.body;
 let darkMode = localStorage.getItem("dark-mode");
@@ -19,11 +13,11 @@ const disableDarkMode = () => {
 };
 
 if (darkMode === "enabled") {
-  enableDarkMode(); // set state of darkMode on page load
+  enableDarkMode(); 
 }
 
 toggleBtn.addEventListener("click", (e) => {
-  darkMode = localStorage.getItem("dark-mode"); // update darkMode when clicked
+  darkMode = localStorage.getItem("dark-mode"); 
   if (darkMode === "disabled") {
     enableDarkMode();
   } else {
