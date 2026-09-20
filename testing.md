@@ -154,6 +154,12 @@ The initial check for the css code came up with zero errors so no change was nee
 
 ![image of css validation](/emporio_project/static/documentation/css-validation.png)
 
+#### Javascript
+
+The initial check for the javascript code came up with zero errors so no change was needed.
+
+![image of javascript validation](/emporio_project/static/documentation/javascript-validation.png)
+
 #### Python
 
 ##### Project

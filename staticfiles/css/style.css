@@ -87,6 +87,12 @@ h1, h2 {
     font-family:  var(--secondary-font);
     font-size: 5vw;
 }
+/* Dark mode */
+
+.darkmode {
+    --White: #2A2A72 ;
+    --Navy: #707072 ;
+}
 
 
 /* services section */
@@ -275,3 +281,7 @@ form, table{
     font-size: 33px;
 }
 }
+
+
+
+
