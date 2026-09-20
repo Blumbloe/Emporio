@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block content %}
-<section class="section">
+<section>
 <div class="d-flex align-items-center justify-content-center">   
     <div>
         <h1>Welcome to Emporio</h1>
@@ -15,8 +15,8 @@
     </div>
 </div>
 </section>
-<section class="section">
-<div>
+<section>
+<div class="mb-4">
     <h2>Services</h2>
     <p>When it comes to how your website looks and works, it is a make-or-break proposition.
        Your website visitors must feel comfortable navigating and interacting with your website, it must appeal
@@ -24,89 +24,96 @@
        so that your website ticks off all the boxes for a first rate site!
     </p>
 </div>
-<div class="card-deck container-md">
+<div class="card-deck container-md py-4">
     <div class="row gx-3 gy-3">
         <div class="col-12 col-md-12 col-lg-4 col-xl-4">
             <div class="card mb-3 h-100">
-            <img src="{% static 'images/consultation.jpg' %}" class="card-img-top" alt="image of consultation package">
-            <div class="card-body">
-                <h3 class="card-title">Consultation</h3>
-                <p class="card-text">Book a free consultation and we can turn your great ideas into a plan. </p>
+                <div class="card-img">
+                    <img src="{% static 'images/consultation.jpg' %}" class="card-img-top" alt="image of consultation package">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Consultation</h3>
+                    <p class="card-text text-start">Book a free consultation and we can turn your great ideas into a plan. </p>
                     <ul>
                         <li>Set the goals</li>
                         <li>Set the project boundaries</li>
                         <li>recieve feedback</li>
                     </ul>
-                <div>
-                <form  action="https://buy.stripe.com/test_6oUdRacZuc1t9iUcX4a7C02" method="get">
-                    <button class="btn custom-button-outline mx-auto card-button">  Buy Now! </button>
-                </form>
                 </div>
-            </div>
+                <div class="card-bottom">
+                    <form  action="https://buy.stripe.com/test_6oUdRacZuc1t9iUcX4a7C02" method="get">
+                        <button class="btn custom-button-outline mx-auto card-button">  Buy Now! </button>
+                    </form>
+                </div>
             </div>
         </div>
 
         <div class="col-12 col-md-12 col-lg-4 col-xl-4">
             <div class="card mb-3 h-100">
-            <img src="{% static 'images/standard-package.jpg' %}" class="card-img-top" alt="image of consultation package">
-            <div class="card-body">
-                <h3 class="card-title">Standard Package</h3>
-                <p class="card-text ">Fully responsive website design. <b>From £1500</b> </p>
+                <div class="card-img">
+                    <img src="{% static 'images/standard-package.jpg' %}" class="card-img-top" alt="image of consultation package">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Standard Package</h3>
+                    <p class="card-text text-start">Fully responsive website design. <b>From £1500</b> </p>
                     <ul>
                         <li>Wireframes and mockups</li>
                         <li>responsive website design</li>
                         <li>SEO foundations</li>
                         <li>Monthly maintenance & hosting</li>
                     </ul>
-                <div>
-                <form  action="https://buy.stripe.com/test_3cI8wQ3oU5D5cv6aOWa7C04" method="get">
-                    <button class="btn custom-button-outline mx-auto card-button"> Buy Now! </button>
-                </form>
                 </div>
-            </div>
+                <div class="card-bottom">
+                    <form  action="https://buy.stripe.com/test_3cI8wQ3oU5D5cv6aOWa7C04" method="get">
+                        <button class="btn custom-button-outline mx-auto card-button"> Buy Now! </button>
+                    </form>
+                </div>
             </div>
         </div>
 
         <div class="col-12 col-md-12 col-lg-4 col-xl-4">
             <div class="card mb-3 h-100">
-            <img src="{% static 'images/premium-package.jpg' %}" class="card-img-top" alt="image of consultation package">
-            <div class="card-body">
-                <h3 class="card-title">Premium Package</h3>
-                <p class="card-text">This includes everything from the standard package with a few extras. <b>From £2500</b> </p>
+                <div class="card-img">
+                    <img src="{% static 'images/premium-package.jpg' %}" class="card-img-top" alt="image of consultation package">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Premium Package</h3>
+                    <p class="card-text text-start">This includes everything from the standard package with a few extras. <b>From £2500</b> </p>
                     <ul>
                         <li>1 year website hosting included</li>
                         <li>small monthly website updates included</li>
                         <li>3 month progress review</li>
                     </ul>
-                <div>
-                <form  action="https://buy.stripe.com/test_eVq3cw9Ni6H92Uw8GOa7C05" method="get">
-                    <button class="btn custom-button-outline  mx-auto card-button"> Buy Now! </button>
-                </form>
+                </div>
+                <div class="card-bottom">
+                    <form  action="https://buy.stripe.com/test_eVq3cw9Ni6H92Uw8GOa7C05" method="get">
+                        <button class="btn custom-button-outline  mx-auto card-button"> Buy Now! </button>
+                    </form>
                 </div>
             </div>
-            </div>
         </div>
+
     </div>
 </div>
 
 </section>
-<section id="portfolio" class="section">
+<section id="portfolio" class="mb-4">
 <div>
     <h2>
         Portfolio
     </h2>
     <p >Here you can see some of the previous works we've done!</p>
 </div>
-<div id="portfolio-imgs">
-    <div class="d-flex image-container overlay">
+<div id="portfolio-imgs" class="row gx-3 gy-3">
+    <div class="d-flex image-container overlay col-lg-4 ">
        <a href="https://sortead-7559c99c8714.herokuapp.com/"> <img src="{% static 'images/portfolio-sortead-thumbnail.png' %}"
-        alt="Thumbnail for Sortead site"> </a>
+        alt="Thumbnail for Sortead site" > </a>
     </div>
-    <div class="d-flex image-container overlay">
+    <div class="d-flex image-container overlay col-lg-4 ">
        <a href="https://blumbloe.github.io/rock-paper-site/">  <img src="{% static 'images/portfolio-rock-paper-thumbnail.png' %}"
-         alt="Thumbnail for Rock paper site"> </a>
+         alt="Thumbnail for Rock paper site" > </a>
     </div>
-    <div class="d-flex image-container overlay">
+    <div class="d-flex image-container overlay col-lg-4 ">
        <a href="https://blumbloe.github.io/fortniting-101/">  <img src="{% static 'images/portfolio-fortniting-thumbnail.png' %}"
          alt="Thumbnail for Fortniting-101 site"> </a>
     </div>
