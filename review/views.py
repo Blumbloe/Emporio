@@ -29,6 +29,7 @@ def new_review(request):
         form = CreateReview()
     return render(request, 'review/make_review.html', {'form': form})
 
+
 @login_required(login_url="/users/login/")
 def update_review(request, review_id):
     review = Review.objects.get(id=review_id)
@@ -43,6 +44,7 @@ def update_review(request, review_id):
     return render(request, 'review/update_review.html',
                   {'form': form, 'review': review})
 
+
 @login_required(login_url="/users/login/")
 def delete_review(request, review_id):
     review = Review.objects.get(id=review_id)
@@ -50,6 +52,7 @@ def delete_review(request, review_id):
         review.delete()
         return redirect(reverse('review_list'))
     return render(request, 'review/delete_review.html')
+
 
 @login_required(login_url="/users/login/")
 def review_list(request):
